@@ -4,8 +4,11 @@ import GHDrawn from './svg/ghdrawn.svg'
 import LI from './svg/linkedin.svg'
 import email from './svg/email.svg'
 import me from './images/me.jpg'
+import resume from './resume/ALD_Resume.pdf'
+import latexResume from './resume/resume.zip'
+import pdf from './svg/pdf.svg'
+import latexLogo from './svg/LaTeX_logo.svg'
 import React, { useState, useEffect } from 'react';
-
 function App() {
   const [isLoading, setLoading] = useState(true);
   function fakeRequest() {
@@ -26,23 +29,44 @@ function App() {
   }
   return (
     <div>
-      <div class="container">
+      <div className="container">
         <AboutMe />
-        <div>
-          HJIOPDF 
-        </div>
+        <Projects />
+        <Resume />
       </div>
     </div>
   );
 }
+function Projects(){
+  return (
+    <div>
+      <h1 className='Name'>Projects</h1>
+    </div>
+  );
+}
+function Resume(){
+  return (
+  <div>
+    <h1 className='Name'>My Resume</h1>
+    <embed src={resume} width="80%" height="900vh" ></embed>
+    <br></br>
+    <a href={resume} download>
+      <img src={pdf} className="icon"></img>
+    </a>
+    <a href={latexResume} download>
+      <img src={latexLogo} className="icon"></img>
+    </a>
+  </div>
+  );
+}
 function AboutMe(){
   return (
-    <div class="flex">
+    <div className="flex">
       <div>
-        <h1 class="Name">
+        <h1 className="Name">
           Hi, I am Adin Lukas!
         </h1>
-        <p class="description">
+        <p className="description">
           You can call me Adin or Lukas, I like both  .
           <br></br>
           <br></br>
@@ -63,14 +87,14 @@ function AboutMe(){
 }
 function Socials(){
   return(
-      <ul class="socials">
+    <ul className="socials">
         <li>
-          <a href="https://www.linkedin.com/in/adin-lukas-delacruz/" class="social">
+        <a href="https://www.linkedin.com/in/adin-lukas-delacruz/">
             <img src={LI}></img>
           </a>
         </li>
         <li>
-          <a href="https://github.com/Lukeisun" class="social">
+        <a href="https://github.com/Lukeisun">
             <img src={GHDrawn}></img>
           </a>
         </li>
