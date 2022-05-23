@@ -1,15 +1,20 @@
 
 .container{
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  width: 50%;
+  width: 50vw;
   text-align: center;
   border-radius: 20px;
   background-color: #4f84af;
   animation: fadein 2s;
+}
+.sectionContainer{
+  width: 60%;
+  margin: 0 auto ;
+  text-align: center;
 }
 @keyframes fadein {
   from {
@@ -26,6 +31,13 @@
   /*eaae63*/
   text-align: left;
   font-size: 20px;
+}
+.projectDescription{
+    font-family: "Code New Roman";
+      color: rgb(255, 255, 255);
+      /*eaae63*/
+      text-align: center;
+      font-size: 18px;
 }
 @font-face{
   font-family: 'Code New Roman';
@@ -60,6 +72,7 @@
     height: 36px;
     padding: 5px;
 }
+
 .Name{
   margin-top: 2%;
   margin-bottom: 1%;
@@ -69,7 +82,10 @@
   font-size: 36px;
   /* margin-bottom: -10px; */
 }
-
+.Project{
+  color: rgb(248, 248, 248);
+  font-family: 'Code New Roman Bold';
+}
 #me{
   border-radius: 100px;
   background-color: white;
@@ -78,6 +94,27 @@
 .flex{
   display:flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1080px) {
+
+  .container {
+    width: 100vw;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-radius: 0px;
+  }
+  .flex{
+    display: block;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .resume{
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    min-width: 700px;
+  }
+
 }
 
 
